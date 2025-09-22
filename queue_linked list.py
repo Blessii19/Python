@@ -14,7 +14,7 @@ class CarParking:
     
     def car_entry(self, car_no):
         new_car = Node(car_no)
-        if self.rear is None: # Parking empty
+        if self.rear is None: 
             self.front = self.rear = new_car
         else:
             self.rear.next = new_car
@@ -28,11 +28,11 @@ class CarParking:
             return
         car_no = self.front.car_no
         self.front = self.front.next
-        if self.front is None: # Parking became empty
+        if self.front is None: 
             self.rear = None
         print(f"Car {car_no} exited parking.")
 
-    # Show first car to leave next
+    
     def next_exit(self):
         if self.is_empty():
             print("Parking is empty.")
