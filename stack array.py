@@ -1,5 +1,5 @@
 stack = []
-MAX = 5 # Maximum size of stack
+MAX = 5
 
 def push():
     if len(stack) == MAX:
@@ -25,7 +25,7 @@ def peek():
 def display():
     print("Stack (top to bottom):", stack[::-1])
 
-# Menu
+
 while True:
     print("\n1.Push\n2.Pop\n3.Peek\n4.Display\n5.Exit")
     choice = int(input("Enter your choice: "))
