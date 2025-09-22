@@ -11,7 +11,7 @@ class CarParking:
     def is_empty(self):
         return self.front is None
 
-    # Car enters parking (Enqueue)
+    
     def car_entry(self, car_no):
         new_car = Node(car_no)
         if self.rear is None: # Parking empty
@@ -21,7 +21,7 @@ class CarParking:
             self.rear = new_car
         print(f"Car {car_no} entered parking.")
 
-    # Car leaves parking (Dequeue)
+    
     def car_exit(self):
         if self.is_empty():
             print("Parking is empty. No cars to exit.")
@@ -39,7 +39,7 @@ class CarParking:
         else:
             print(f"Next car to exit: {self.front.car_no}")
 
-    # Display all parked cars
+    
     def display_parking(self):
         if self.is_empty():
             print("Parking is empty.")
@@ -51,7 +51,7 @@ class CarParking:
             temp = temp.next
         print("None")
 
-# Menu driven
+
 parking = CarParking()
 while True:
     print("\n--- Car Parking System ---")
